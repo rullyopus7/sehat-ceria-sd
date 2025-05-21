@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,7 +53,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
+				// Custom colors for the children's health app
+				"kids-blue": "#33C3F0",
+				"kids-purple": "#9b87f5",
+				"kids-green": "#7FD66F",
+				"kids-yellow": "#FFD166",
+				"kids-red": "#EF476F",
+				"kids-orange": "#FF9E5D",
+				"kids-light-blue": "#D3E4FD",
+				"kids-light-green": "#F2FCE2",
+				"kids-light-yellow": "#FEF7CD",
+				"sidebar": {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
 					primary: 'hsl(var(--sidebar-primary))',
@@ -84,11 +95,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				'scale-in': {
+					'0%': { transform: 'scale(0.95)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce': 'bounce 2s infinite ease-in-out',
+				'scale-in': 'scale-in 0.2s ease-out'
 			}
 		}
 	},
